@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "script": "./dist/index.js",
+      "name": "ecom-service"
+    },
+    {
+      "script": "./dist/index-worker.js",
+      "name": "ecom-worker"
+    }
+  ]
+}

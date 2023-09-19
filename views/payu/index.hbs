@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Payment Gateway</title>
+    <script>
+        function submitForm() {
+            document.payUForm.submit();
+        }
+    </script>
+ <style>
+.center { 
+  width:90vw;
+  height: 90vh;
+}
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>   
+  </head>
+  <body onload="submitForm()" class="center">
+    <form action="{{gateWayUrl}}" id="payment_form" method="Post" name="payUForm">
+      <input type="hidden" id="surl" name="surl" value="{{redirectUrl}}" />
+      <input type="hidden" id="furl" name="furl" value="{{redirectUrl}}" />
+      <input type="hidden" id="curl" name="curl" value="{{redirectUrl}}" />
+      <input type="hidden" id="key" name="key" value="{{merchantKey}}" />
+      <input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="{{order.code}}" /><br/>
+      <input type="hidden" id="amount" name="amount" placeholder="Amount" value="{{totalOrderAmount}}" /><br/>
+      <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="{{productInfo}}" /><br/>
+      <input type="hidden" id="firstname" name="firstname" placeholder="First Name" value="{{order.customer.firstName}}" /><br/>
+      <input type="hidden" id="email" name="email" placeholder="Email ID" value="{{order.customer.emailAddress}}" /><br/>
+      <input type="hidden" id="phone" name="phone" placeholder="Phone" value="{{order.customer.phoneNumber}}" /><br/>
+      <input type="hidden" id="hash" name="hash" placeholder="Hash" value="{{hash}}" /><br/>
+      <input type="submit" value="" style="visibility: hidden;"/>
+    </form>
+    <p>{{ message }}</p>
+  </body>
+</html>

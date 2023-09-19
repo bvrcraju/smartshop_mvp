@@ -1,0 +1,109 @@
+{
+  "overwrite": true,
+  "config": {
+    "strict": true,
+    "namingConvention": "keep",
+    "scalars": {
+      "ID": "string | number"
+    },
+    "maybeValue": "T"
+  },
+  "generates": {
+    "src/plugins/order-extention/generated-admin-types.ts": {
+      "schema": "http://localhost:3000/admin-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/product-extention/generated-shop-types.ts": {
+      "schema": "http://localhost:3000/shop-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/product-varient-extention/generated-shop-types.ts": {
+      "schema": "http://localhost:3000/shop-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/rewards/generated-shop-types.ts": {
+      "schema": "http://localhost:3000/shop-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/rewards/generated-admin-types.ts": {
+      "schema": "http://localhost:3000/admin-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/shopping-mall/generated-shop-types.ts": {
+      "schema": "http://localhost:3000/shop-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/shopping-mall/generated-admin-types.ts": {
+      "schema": "http://localhost:3000/admin-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    },
+    "src/plugins/supplier/generated-admin-types.ts": {
+      "schema": "http://localhost:3000/admin-api",
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility"
+      ]
+    }
+  }
+}
